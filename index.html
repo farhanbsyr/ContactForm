@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <!-- Google Font Karla -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- akhir link Google Font -->
+
+    <title>Contact form</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-form">
+        <div class="title">
+          <h1>Contact Us</h1>
+        </div>
+        <form action="">
+          <div class="form-group-names">
+            <div class="form-group">
+              <label for="firstname">First Name <span>*</span></label>
+              <div class="input-group">
+                <input
+                  id="firstname"
+                  name="firstname"
+                  type="text"
+                  required
+                  aria-describedby="usernameValidation2"
+                />
+                <p
+                  id="usernameValidation2"
+                  class="validation-message"
+                  aria-live="polite"
+                ></p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="lastname">Last Name <span>*</span></label>
+              <div class="input-group">
+                <input
+                  type="text"
+                  name="lastname"
+                  id="lastname"
+                  minlength="10"
+                  aria-describedby="usernameValidation"
+                  required
+                />
+                <p
+                  id="usernameValidation"
+                  class="validation-message"
+                  aria-live="polite"
+                ></p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="">Email Address <span>*</span></label>
+            <div class="input-group">
+              <input type="email" id="email" required />
+              <p
+                id="emailValidation"
+                class="validation-message"
+                aria-live="polite"
+              ></p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="quey">Query Type <span>*</span></label>
+            <div class="radio-group">
+              <div id="radio-1" class="radio-button">
+                <input
+                  required
+                  type="radio"
+                  name="query"
+                  value="generalEnquery"
+                  id="generalEnquery"
+                />
+                <label for="generalEnquery">General Enquery</label>
+              </div>
+              <div id="radio-2" class="radio-button">
+                <input
+                  required
+                  type="radio"
+                  name="query"
+                  value="supportRequest"
+                  id="supportRequest"
+                />
+                <label for="supportRequest">Support Request</label>
+              </div>
+            </div>
+            <p
+              id="queryValidation"
+              class="validation-message"
+              aria-live="polite"
+            ></p>
+          </div>
+          <div class="form-group">
+            <label for="deskripsi">Message <span>*</span></label>
+            <div class="input-group">
+              <textarea
+                value="deskripsi"
+                name="deskripsi"
+                id="message"
+              ></textarea>
+              <p
+                id="messageValidation"
+                class="validation-message"
+                aria-live="polite"
+              ></p>
+            </div>
+          </div>
+          <div class="input-group">
+            <div class="form-group-checks">
+              <input type="checkbox" required id="consent" value="consent" />
+              <label for="consent"
+                >I consent to being contacted by the team <span>*</span></label
+              >
+            </div>
+            <p
+              id="consentValidation"
+              class="validation-message"
+              aria-live="polite"
+            ></p>
+          </div>
+          <div class="form-group-btn">
+            <button type="submit" class="btnSubmit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!--     
+    Contact Us First Name This field is required Last Name This field is
+    required Email Address Please enter a valid email address This field is
+    required Query Type General Enquiry Support Request Please select a query
+    type Message This field is required I consent to being contacted by the team
+    To submit this form, please consent to being contacted Submit Message Sent!
+    Thanks for completing the form. We'll be in touch soon! -->
+
+    <script src="index.js"></script>
+  </body>
+</html>
