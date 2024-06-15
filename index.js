@@ -49,10 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const errorElement = document.getElementById("usernameValidation");
 
     if (lastName === "") {
-      errorElement.innerText = "Last Name is required";
-      return false;
-    } else if (lastName.length < 10) {
-      errorElement.innerText = "Last Name must be at least 10 characters long";
+      errorElement.innerText =
+        "if you don't have last name, then please write '-'";
       return false;
     } else {
       errorElement.innerText = "";
