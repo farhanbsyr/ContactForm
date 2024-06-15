@@ -168,7 +168,12 @@ document.addEventListener("DOMContentLoaded", function () {
       isValidMessage &&
       isValidConsent
     ) {
-      alert("Form submitted successfully!"); // Replace with your submission logic
+      const customAlert = document.getElementById("custom-alert");
+      customAlert.style.display = "block";
+
+      setTimeout(() => {
+        customAlert.style.display = "none";
+      }, 3000); // Replace with your submission logic
       form.reset(); // Reset the form after successful submission
     } else {
       alert("Please fill out the form correctly."); // Replace with your error handling logic

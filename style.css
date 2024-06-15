@@ -28,7 +28,7 @@ label {
   background-color: #e2f1e7;
   height: 100%;
   margin: 0;
-  padding: 2rem 2rem;
+  padding: 5rem;
 }
 
 .container-form {
@@ -164,6 +164,63 @@ textarea {
   margin-top: 4px;
   padding: 0;
   font-size: 1rem;
+}
+
+/* alert succes */
+.custom-alert {
+  position: fixed;
+  padding: 1rem 1rem;
+  background-color: #2a4244;
+  display: none;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.5rem;
+  animation: fadeInOut 3s forwards;
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.alert-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: white;
+}
+
+.succses-btn {
+  width: 15px;
+  height: 15px;
+
+  background: url("./assets/images/icon-success-check.svg");
+  background-size: contain;
+  border: none;
+}
+
+#alert-title {
+  display: flex;
+  flex-direction: row;
+  gap: 0.4rem;
+  align-items: center;
+}
+.title-message {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.message-sent {
+  font-size: 0.6rem;
+  font-weight: 200;
 }
 
 @media only screen and (max-width: 500px) {
